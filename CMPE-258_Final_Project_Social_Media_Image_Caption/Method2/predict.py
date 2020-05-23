@@ -11,8 +11,12 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
 
+import keras.backend.tensorflow_backend as tb
+tb._SYMBOLIC_SCOPE.value = True
+
 def generate_desc(model, tokenizer, photo, max_length):
-    
+
+
 # seed the generation process
     in_text = 'startseq'
     # iterate over the whole length of the sequence
